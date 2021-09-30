@@ -1,0 +1,24 @@
+{
+  "name": "mvc_techblog",
+  "version": "1.0.0",
+  "description": "Deployable MVC using handlebars",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam-niggebrugge/MVC_TechBlog.git"
+  },
+  "keywords": [
+    "cms",
+    "blogs"
+  ],
+  "author": "Adam Niggebrugge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adam-niggebrugge/MVC_TechBlog/issues"
+  },
+  "homepage": "https://github.com/adam-niggebrugge/MVC_TechBlog#readme"
+}
