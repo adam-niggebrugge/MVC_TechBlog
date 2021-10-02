@@ -18,16 +18,23 @@
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <span role="img" aria-label="money">💸</span>
         <a href="/">Blogs CMS!</a>
       </h1>
       <nav>
+        <li><a href="/">Home</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/register">Register</a></li>
+     
+
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/blogs/1">Blog Post </a></li>
+        <li><a href="/blogs/new">Create Blog</a></li>
+        <li><a href="/blogs/edit/1">Edit Blog</a></li>
+        <button class="no-button" id="logout">Logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <li><a href="/login">login</a></li>
         {{/if}}
       </nav>
     </header>
