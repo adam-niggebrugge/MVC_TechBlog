@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 router.get('/', async (req, res) => {
     try{
-        res.send("hello world2o");
+       res.render("home")
     } catch (err){
         res.status(500).json(err);
     }

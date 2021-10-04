@@ -7,7 +7,7 @@ const authRoutes = require("./auth");
 router.use('/blog', blogRoutes);
 router.use('/dashboard', dashboardRoutes);
 router.use('/', homeRoutes);
-router.use('/auth', authRoutes);
+router.use('/', authRoutes);
 
 
 

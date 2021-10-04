@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 router.get('/', async (req, res) => {
     try{
-        res.send("hello dashoe");
+        res.render("dashboard")
     } catch (err){
         res.status(500).json(err);
     }
