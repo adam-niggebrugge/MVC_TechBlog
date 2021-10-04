@@ -5,14 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech BLOG!</title>
-  <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./vendor/materialize/css/materialize.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js" integrity="sha512-Vp2UimVVK8kNOjXqqj/B0Fyo96SDPj9OCSm1vmYSrLYF3mwIOBXh/yRZDVKo8NemQn1GUjjK0vFJuCSCkYai/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <body>
   <div class="flex-column justify-space-around">
@@ -20,26 +16,47 @@
       <h1>
         <a href="/">Blogs CMS!</a>
       </h1>
-      <nav>
-        <li><a href="/">Home</a></li>
-        <li><a href="/dashboard">Dashboard</a></li>
-        <li><a href="/register">Register</a></li>
-     
-
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <li><a href="/profile">Profile</a></li>
-        <li><a href="/blogs/1">Blog Post </a></li>
-        <li><a href="/blogs/new">Create Blog</a></li>
-        <li><a href="/blogs/edit/1">Edit Blog</a></li>
-        <button class="no-button" id="logout">Logout</button>
-        {{else}}
-        <li><a href="/login">login</a></li>
-        {{/if}}
-      </nav>
+    <nav class="cust-nav">
+          <div class="nav-wrapper">
+            <label class="brand-logo cust-label">The Tech Blog</label>
+            <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-desktop" class="right hide-on-med-and-down">
+              <li><a href="/">Home</a></li>
+              <li><a href="/dashboard">Dashboard</a></li>
+              <li><a href="/register">Register</a></li>
+<!-- Conditionally render login or logout links -->
+              {{#if logged_in}}
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/blogs/1">Blog Post </a></li>
+                <li><a href="/blogs/new">Create Blog</a></li>
+                <li><a href="/blogs/edit/1">Edit Blog</a></li>
+                <button class="no-button" id="logout">Logout</button>
+              {{else}}
+                <li><a href="/login">login</a></li>
+              {{/if}}
+            </ul>
+          </div>
+    </nav>
+    <ul class="sidenav" id="mobile-menu">
+                   <li><a href="/">Home</a></li>
+              <li><a href="/dashboard">Dashboard</a></li>
+              <li><a href="/register">Register</a></li>
+<!-- Conditionally render login or logout links -->
+              {{#if logged_in}}
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/blogs/1">Blog Post </a></li>
+                <li><a href="/blogs/new">Create Blog</a></li>
+                <li><a href="/blogs/edit/1">Edit Blog</a></li>
+                <button class="no-button" id="logout">Logout</button>
+              {{else}}
+                <li><a href="/login">login</a></li>
+              {{/if}}
+    </ul>
     </header>
     <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
+<!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
@@ -51,6 +68,10 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js" integrity="sha512-Vp2UimVVK8kNOjXqqj/B0Fyo96SDPj9OCSm1vmYSrLYF3mwIOBXh/yRZDVKo8NemQn1GUjjK0vFJuCSCkYai/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="vendor/materialize/js/materialize.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

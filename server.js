@@ -35,7 +35,7 @@ app.use(express.json());
 //good for form submission
 app.use(express.urlencoded({ extended: true }));
 //set up the static paths for css, images, javascript (front end stuff)
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, './public')));
 
 app.use(routes);
 
