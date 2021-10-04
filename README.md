@@ -23,7 +23,7 @@ AS A developer who writes about tech I WANT a CMS-style blog site SO THAT I can 
 
 ### License
 
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
