@@ -1,1 +1,8 @@
 <h1>HOME PAGE</h1>
+{{#if blogs.length}}
+    {{#each blogs as |blog|}}
+        {{> blogCard}}
+    {{/each}}
+{{else}}
+    <h2>No Blogs Currently Found!!!</h2>
+{{/if}}

@@ -20,7 +20,7 @@ body{
     background-color: var(--gray);
 }
 
-body :hover {
+.cust-glow :hover {
     text-shadow: 2px 2px 5px var(--shadow);
     color: var(--chocolate-web);
 }
