@@ -6,7 +6,13 @@ router.get('/', async (req, res) => {
     const userId = 1;
 
     try{
-        console.log(`is there data? ${JSON.stringify(blog)}`);
+        console.log(`++++++++++++++++++++++++++++++++
+        +
+        + is there data? 
+        +
+        +${JSON.stringify(blog)}
+        +
+        ++++++++++++++++++++++++++++++++++`);
 
         //mapping concept. same data plus additional isAuthor attribute of
         // if coming from database must be seralirzed
@@ -16,8 +22,13 @@ router.get('/', async (req, res) => {
                 isAuthor: blog.user.userId === userId,
             };
        });
-       console.log(`what is going on?? ${JSON.stringify(blogsMap)}`);
-           res.render("home", {blog: blogsMap});
+       console.log(`******
+       * 
+       * what is going on??
+       * 
+       * ${JSON.stringify(blogsMap)}
+       * ***************************`);
+           res.render("home", {blogs: blogsMap});
     } catch (err){
         console.log(err)
         res.status(500).json(err);
