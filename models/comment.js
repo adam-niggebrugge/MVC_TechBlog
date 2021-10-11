@@ -13,6 +13,7 @@ Comment.init({
     },
     body: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
            len: [3]
         }

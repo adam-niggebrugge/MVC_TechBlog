@@ -39,12 +39,26 @@ router.post('/', async (req, res) => {
         req.session.save(() => {
           req.session.user_id = userData.id;
           req.session.logged_in = true;
-          
+          console.log(`++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+          + 
+          + ${req.session.logged_in}
+          + 
+          +++++++++++++++++++++++++++++++`);
           res.json({ logged_in:req.session.logged_in, user: userData, message: 'You are now logged in!' });
         });
       } catch (err) {
         res.status(400).json(err);
       }
+});
+
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
 });
 
 module.exports = router;

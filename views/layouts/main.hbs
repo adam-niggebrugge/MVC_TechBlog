@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech BLOG!</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="./vendor/materialize/css/materialize.min.css"/>
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="/vendor/materialize/css/materialize.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
@@ -25,14 +25,12 @@
             <ul id="nav-desktop" class="right hide-on-med-and-down cust-glow">
               <li><a href="/">Home</a></li>
               <li><a href="/dashboard">Dashboard</a></li>
-              
 <!-- Conditionally render login or logout links -->
               {{#if logged_in}}
                 <li><a href="/profile">Profile</a></li>
-                <li><a href="/blogs/">Blog Post </a></li>
                 <li><a href="/blogs/new">Create Blog</a></li>
                 <li><a href="/blogs/edit/">Edit Blog</a></li>
-                <button class="no-button" id="logout">Logout</button>
+                <li><a href="#" id="logout">Logout</a></li>
               {{else}}
                 <li><a href="/register">Register</a></li>
                 <li><a href="/login">login</a></li>
@@ -41,15 +39,14 @@
           </div>
     </nav>
     <ul class="sidenav cust-glow" id="mobile-menu">
-                   <li><a href="/">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="/dashboard">Dashboard</a></li>
 <!-- Conditionally render login or logout links -->
-              {{#if loggedIn}}
+              {{#if logged_in}}
                 <li><a href="/profile">Profile</a></li>
-                <li><a href="/blogs/">Blog Post </a></li>
                 <li><a href="/blogs/new">Create Blog</a></li>
                 <li><a href="/blogs/edit/">Edit Blog</a></li>
-                <button class="no-button" id="logout">Logout</button>
+                <li><a href="#" id="navlogout">Logout</a></li>
               {{else}}
                 <li><a href="/register">Register</a></li>
                 <li><a href="/login">login</a></li>
@@ -66,13 +63,13 @@
   </div>
 
   <!-- Render script for logged in users only -->
-  {{#if loggedIn}}
+  {{#if logged_in}}
     <script src="/js/logout.js"></script>
   {{/if}}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js" integrity="sha512-Vp2UimVVK8kNOjXqqj/B0Fyo96SDPj9OCSm1vmYSrLYF3mwIOBXh/yRZDVKo8NemQn1GUjjK0vFJuCSCkYai/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="vendor/materialize/js/materialize.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="/vendor/materialize/js/materialize.min.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>

@@ -21,18 +21,18 @@ router.get('/', async (req, res) => {
         +${JSON.stringify(blogData)}
         +
         ++++++++++++++++++++++++++++++++++`);
-        const blogsMap = [];
+        let blogsMap = [];
         //mapping concept. same data plus additional isAuthor attribute of
         // if coming from database must be seralirzed
         if(req.session.logged_in){
-            const userId = req.session.user_id;
+            let userId = req.session.user_id;
             blogsMap = blogData.map((blog) => {
                 return{
                     ...blog,
                     isAuthor: blog.user.userId === userId,
                 };
             });
-            res.render("home", {blogs: blogsMap});
+            res.render("home", {blogs: blogsMap, logged_in: req.session.logged_in});
         } else {
             blogsMap = blogData.map((blog) => {
                 return{
