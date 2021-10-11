@@ -1,0 +1,26 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark-purple: #161032ff;
+    --canary: #faff81ff;
+    --gray: rgb(208, 208, 209);
+    --shadow: rgba(179, 181, 187, 0.452);
+    --chocolate-web: #e06d06ff;
+    --dark-slate-gray: #3f5e5aff;
+    --midnight-green-eagle-green: #0d5c63ff;
+    --polished-pine: #70a288ff; 
+}
+
+.cust-nav{
+    color: var(--white);
+    background-color: var(--dark-purple);
+}
+
+body{
+    background-color: var(--gray);
+}
+
+.cust-glow :hover {
+    text-shadow: 2px 2px 5px var(--shadow);
+    color: var(--chocolate-web);
+}
