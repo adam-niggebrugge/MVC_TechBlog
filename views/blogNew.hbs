@@ -1,15 +1,17 @@
 <h3>New Blog</h3>
 
-<form class="form" action="">
+<form class="form" id="createBlogForum">
     <section class="form-group">
         <label for="blogTitle">Title</label>
-        <input type="text" class="form-control" name="blogTitle" id="blogTitle"/>
+        <input type="text" class="form-control" name="blogTitle" id="blogTitle" required/>
     </section>
     <section class="form-group">
         <label for="blogBody" class="formbuilder-textarea-label">Text Area</label>
-        <textarea type="textarea" class="form-control" name="blogBody" id="blogBody"></textarea>
+        <textarea type="textarea" class="form-control" name="blogBody" id="blogBody" required></textarea>
     </section>
     <div class="form-group">
         <button type="submit" class="btn" name="createBlog" id="createBlog">Create Blog</button>
     </div>
 </div>
+
+<script src="/js/createBlog.js"></script>

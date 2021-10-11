@@ -2,8 +2,15 @@ const router = require('express').Router();
 const { Blog } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/create', withAuth, async (req, res) => {
   try {
+    const bodyCheck = await JSON.stringify(req.body);
+    console.log(`&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+                  &
+                  & Trying to Create
+                  & ${bodyCheck}
+                  & 
+                  &&&&&&&&&&&&&&&&&&&&&&&&`)
     const newBlog = await Blog.create({
       ...req.body,
       user_id: req.session.user_id,
@@ -34,7 +41,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
-  });
+});
 
 module.exports = router;
   
