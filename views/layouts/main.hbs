@@ -25,15 +25,16 @@
             <ul id="nav-desktop" class="right hide-on-med-and-down cust-glow">
               <li><a href="/">Home</a></li>
               <li><a href="/dashboard">Dashboard</a></li>
-              <li><a href="/register">Register</a></li>
+              
 <!-- Conditionally render login or logout links -->
               {{#if logged_in}}
                 <li><a href="/profile">Profile</a></li>
-                <li><a href="/blogs/1">Blog Post </a></li>
+                <li><a href="/blogs/">Blog Post </a></li>
                 <li><a href="/blogs/new">Create Blog</a></li>
-                <li><a href="/blogs/edit/1">Edit Blog</a></li>
+                <li><a href="/blogs/edit/">Edit Blog</a></li>
                 <button class="no-button" id="logout">Logout</button>
               {{else}}
+                <li><a href="/register">Register</a></li>
                 <li><a href="/login">login</a></li>
               {{/if}}
             </ul>
@@ -42,15 +43,15 @@
     <ul class="sidenav cust-glow" id="mobile-menu">
                    <li><a href="/">Home</a></li>
               <li><a href="/dashboard">Dashboard</a></li>
-              <li><a href="/register">Register</a></li>
 <!-- Conditionally render login or logout links -->
-              {{#if logged_in}}
+              {{#if loggedIn}}
                 <li><a href="/profile">Profile</a></li>
-                <li><a href="/blogs/1">Blog Post </a></li>
+                <li><a href="/blogs/">Blog Post </a></li>
                 <li><a href="/blogs/new">Create Blog</a></li>
-                <li><a href="/blogs/edit/1">Edit Blog</a></li>
+                <li><a href="/blogs/edit/">Edit Blog</a></li>
                 <button class="no-button" id="logout">Logout</button>
               {{else}}
+                <li><a href="/register">Register</a></li>
                 <li><a href="/login">login</a></li>
               {{/if}}
     </ul>
@@ -65,8 +66,8 @@
   </div>
 
   <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+  {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
   {{/if}}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js" integrity="sha512-Vp2UimVVK8kNOjXqqj/B0Fyo96SDPj9OCSm1vmYSrLYF3mwIOBXh/yRZDVKo8NemQn1GUjjK0vFJuCSCkYai/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

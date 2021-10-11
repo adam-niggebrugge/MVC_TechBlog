@@ -2,12 +2,12 @@ const router = require('express').Router();
 const homeRoutes = require("./home");
 const dashboardRoutes = require("./dashboard");
 const blogRoutes = require("./blog");
-const authRoutes = require("./auth");
+const loginRoutes = require("./login");
 
 router.use('/blog', blogRoutes);
 router.use('/dashboard', dashboardRoutes);
 router.use('/', homeRoutes);
-router.use('/', authRoutes);
+router.use('/', loginRoutes);
 
 
 

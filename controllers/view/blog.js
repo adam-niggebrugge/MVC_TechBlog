@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require('../../utils/auth');
 
 router.get('/new', async (req, res) => {
     try{
