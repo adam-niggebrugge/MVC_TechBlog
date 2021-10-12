@@ -27,13 +27,12 @@
               <li><a href="/dashboard">Dashboard</a></li>
 <!-- Conditionally render login or logout links -->
               {{#if logged_in}}
-                <li><a href="/profile">Profile</a></li>
                 <li><a href="/blogs/new">Create Blog</a></li>
                 <li><a href="/blogs/edit/">Edit Blog</a></li>
                 <li><a href="#" id="logout">Logout</a></li>
               {{else}}
                 <li><a href="/register">Register</a></li>
-                <li><a href="/login">login</a></li>
+                <li><a href="/login">Login</a></li>
               {{/if}}
             </ul>
           </div>
@@ -43,13 +42,12 @@
               <li><a href="/dashboard">Dashboard</a></li>
 <!-- Conditionally render login or logout links -->
               {{#if logged_in}}
-                <li><a href="/profile">Profile</a></li>
                 <li><a href="/blogs/new">Create Blog</a></li>
                 <li><a href="/blogs/edit/">Edit Blog</a></li>
                 <li><a href="#" id="navlogout">Logout</a></li>
               {{else}}
                 <li><a href="/register">Register</a></li>
-                <li><a href="/login">login</a></li>
+                <li><a href="/login">Login</a></li>
               {{/if}}
     </ul>
     </header>
