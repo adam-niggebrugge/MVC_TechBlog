@@ -14,7 +14,7 @@ const newCommentHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace(`/blogs/${response.message}`);
+        document.location.replace(`/blogs/${passAtt}`);
       } else {
         alert('Server failed to record comment.');
       }

@@ -1,6 +1,8 @@
 <h2>Blog {{blog.title}} Discussion Board</h2>
 {{> blogCard blog}}
-{{> comment blog.comments}}
+{{#each blog.comments as |comment|}}
+    {{> comment }}
+{{/each}}
 {{#if logged_in}}
     <div class="card">
         <h3 class="card-header">Discussion</h3>
