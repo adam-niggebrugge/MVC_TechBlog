@@ -16,7 +16,7 @@ router.get('/:id', withAuth, async (req, res) => {
         const viewableBlog = await Blog.findOne({
             where: {id: req.params.id},
             attributes: ['id','title','body','date_created'],
-            include: [{ model: Comment, attributes: ['body', 'user_id'], 
+            include: [{ model: Comment, attributes: ['body', 'created_at', 'user_id'], 
                     include: {model: User, attributes: ['name']}}],
             include: [{model: User, attributes: ['name']}]
         })
