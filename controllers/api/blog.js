@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Blog } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/create', withAuth, async (req, res) => {
+router.post('/create', async (req, res) => {
   try {
     const bodyCheck = await JSON.stringify(req.body);
     console.log(`&&&&&&&&&&&&&&&&&&&&&&&&&&&&
