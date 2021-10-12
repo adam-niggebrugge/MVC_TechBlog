@@ -1,0 +1,15 @@
+<h2>Blog {{blog.title}} Discussion Board</h2>
+{{> blogCard blog}}
+{{> comment blog.comments}}
+{{#if logged_in}}
+    <div class="card">
+        <h3 class="card-header">Discussion</h3>
+        <form class="card-body comment-form" id="comment-form">
+
+            <label class="form-label">Add Thoughts</label>
+            <input id="comment" name="comment-body" class="form-input" />
+
+            <button type="submit" class="btn">Contribute</button>
+        </form>
+    </div>
+{{/if}}
