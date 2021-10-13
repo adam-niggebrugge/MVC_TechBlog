@@ -58,6 +58,12 @@ body{
 .warning-btn{
     background-color: var(--red);
 }
+.cust-highlight{
+    font-style: oblique;
+    color: var(--canary);
+    animation: mymove 5s infinite;
+}
+
 
 @keyframes mymove {
     50% {text-shadow: 8px 12px 20px var(--dark-slate-gray);}
