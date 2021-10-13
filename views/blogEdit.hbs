@@ -1,3 +1,15 @@
 <h3>Blog Edit</h3>
-{{> blogCard}}
+<form class="form" id="editBlogForum">
+    <section class="form-group">
+        <label for="blogTitle">Title</label>
+        <input type="text" class="form-control" name="blogTitle" id="blogTitle" data-id="{{blog.id}}" required value="{{blog.title}}" data/>
+    </section>
+    <section class="form-group">
+        <label for="blogBody" class="formbuilder-textarea-label">Text Area</label>
+        <textarea type="textarea" class="form-control materialize-textarea" name="blogBody" id="blogBody" required>{{blog.body}}</textarea>
+    </section>
+    <div class="form-group">
+        <button type="submit" class="btn" name="createBlog" id="createBlog">Update Blog</button>
+    </div>
+</div>
 <script type="text/javascript" src="/js/blogEdit.js"></script>

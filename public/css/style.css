@@ -24,3 +24,35 @@ body{
     text-shadow: 2px 2px 5px var(--shadow);
     color: var(--chocolate-web);
 }
+
+.cust-banner {
+    box-shadow: inset 2px 2px 12px var(--shadow), 2px 2px 15px var(--shadow);
+    color: var(--midnight-green-eagle-green);
+    animation: mymove 5s infinite;
+}
+
+.cust-banner a{
+    color: var(--white);
+}
+
+.cust-banner a:hover{
+    color: var(--canary);
+}
+
+
+.card-content a{
+    color: var(--chocolate-web);
+}
+
+.card-content a:hover{
+    color: var(--canary);
+}
+
+.cust-label {
+    background-color: var(--polished-pine);
+    min-width: 100%;
+}
+
+@keyframes mymove {
+    50% {text-shadow: 8px 12px 20px var(--dark-slate-gray);}
+}
