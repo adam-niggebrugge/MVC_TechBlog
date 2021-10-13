@@ -10,7 +10,6 @@ router.get('/', async (req, res) => {
           });
 
             const blogsMap = blogData.map((blog) => blog.get({plain:true}));
-
             res.render("home", {blogs: blogsMap, logged_in: req.session.logged_in});
         
     } catch (err){

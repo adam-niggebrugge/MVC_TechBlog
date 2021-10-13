@@ -2,23 +2,26 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tech BLOG!</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
   <link rel="stylesheet" type="text/css" href="/vendor/materialize/css/materialize.min.css"/>
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a href="/">Blogs CMS!</a>
-      </h1>
+      <label class="brand-logo cust-label"> 
+        <h1 class="cust-banner">
+          <a href="/">The Tech Blog</a>
+        </h1>
+      </label>
     <nav class="cust-nav">
           <div class="nav-wrapper">
-            <label class="brand-logo cust-label">The Tech Blog</label>
+           
             <a href="#" data-target="mobile-menu" class="sidenav-trigger cust-glow">
               <i class="material-icons cust-glow">menu</i>
             </a>
@@ -28,7 +31,6 @@
 <!-- Conditionally render login or logout links -->
               {{#if logged_in}}
                 <li><a href="/blogs/new">Create Blog</a></li>
-                <li><a href="/blogs/edit/">Edit Blog</a></li>
                 <li><a href="#" id="logout">Logout</a></li>
               {{else}}
                 <li><a href="/register">Register</a></li>
@@ -43,7 +45,6 @@
 <!-- Conditionally render login or logout links -->
               {{#if logged_in}}
                 <li><a href="/blogs/new">Create Blog</a></li>
-                <li><a href="/blogs/edit/">Edit Blog</a></li>
                 <li><a href="#" id="navlogout">Logout</a></li>
               {{else}}
                 <li><a href="/register">Register</a></li>
