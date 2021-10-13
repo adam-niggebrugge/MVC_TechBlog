@@ -53,6 +53,10 @@ body{
     min-width: 100%;
 }
 
+.warning-btn{
+    background-color: var(--red);
+}
+
 @keyframes mymove {
     50% {text-shadow: 8px 12px 20px var(--dark-slate-gray);}
 }
