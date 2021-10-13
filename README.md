@@ -26,12 +26,15 @@
 ## Description
 
 Demonstrate a NoSQL MVC server with a simple blog posting idea.
+
 ```
 AS A junior developer learning coding
 I WANT to create a website using MVC templating NoSQL
 SO THAT I further my understanding of the efforts to connect views, models with their respective controllers and how I can deploy so that the site is accessible with persistent data.
 ```
+
 [Live Site](https://nai-blog-cms.herokuapp.com/)
+
 [Video Demo](https://drive.google.com/file/d/1Kbji-0nwYLkaCk6pFSqmHEaoF3ZG56bz/view?usp=sharing)
 
 ## Usage
@@ -39,6 +42,8 @@ SO THAT I further my understanding of the efforts to connect views, models with 
 Coding bootcamp program demonstrating 14 weeks of coding.
 
 ### User Story
+
+Given from the bootcamp program.
 
 ```
 AS A developer who writes about tech
